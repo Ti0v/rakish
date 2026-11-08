@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ركّز · الدعم</title>
-<meta name="description" content="صفحة الدعم والمساعدة لتطبيق ركّز على iOS.">
+<meta name="description" content="تواصل مع دعم تطبيق ركّز.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
@@ -17,97 +17,48 @@
       linear-gradient(180deg, #0D1030 0%, var(--space) 60%);
     background-color:var(--space); min-height:100vh;
   }
-  main { max-width:760px; margin:0 auto; padding:48px 16px 64px; }
+  main { max-width:560px; margin:0 auto; padding:56px 16px 64px; }
   header { text-align:center; margin-bottom:32px; }
   header img { width:96px; height:96px; border-radius:22px; box-shadow:0 12px 40px rgba(124,92,255,.45); }
   h1 { font-size:40px; margin:16px 0 4px; }
   .tag { color:var(--dim); margin:0; }
-  nav { display:flex; gap:12px; justify-content:center; margin-top:20px; flex-wrap:wrap; }
-  nav a { color:var(--text); text-decoration:none; border:1px solid var(--border); border-radius:999px; padding:6px 18px; }
-  section { background:var(--card); border:1px solid var(--border); border-radius:24px; padding:24px; margin-bottom:20px; }
-  h2 { margin:0 0 8px; font-size:24px; color:var(--cyan); }
-  p, li { color:#DCDAF2; }
-  ol, ul { padding-inline-start:22px; margin:8px 0; }
-  a { color:var(--cyan); }
-  .btn {
-    display:inline-block; margin-top:8px; padding:12px 28px; border-radius:999px; font-weight:700; text-decoration:none; color:#fff;
-    background:linear-gradient(90deg, var(--cyan), var(--nebula));
+  .contact {
+    display:flex; align-items:center; gap:16px; text-decoration:none; color:var(--text);
+    background:var(--card); border:1px solid var(--border); border-radius:24px; padding:20px 24px; margin-bottom:16px;
   }
-  details { border-top:1px solid var(--border); padding:12px 0; }
-  details:first-of-type { border-top:0; }
-  summary { cursor:pointer; font-weight:600; color:var(--text); }
-  details p { margin:8px 0 0; }
-  .en { direction:ltr; text-align:left; }
-  .en h2 { color:var(--nebula); }
-  footer { text-align:center; color:var(--dim); font-size:14px; }
+  .contact:hover { border-color:var(--nebula); }
+  .icon { flex:none; width:52px; height:52px; border-radius:16px; display:grid; place-items:center; background:linear-gradient(135deg, var(--cyan), var(--nebula)); }
+  .icon svg { width:26px; height:26px; fill:none; stroke:#fff; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+  .label { display:block; color:var(--dim); font-size:15px; }
+  .value { display:block; font-size:20px; font-weight:600; direction:ltr; text-align:right; }
+  footer { text-align:center; color:var(--dim); font-size:14px; margin-top:32px; }
+  footer a { color:var(--dim); }
 </style>
 </head>
 <body>
 <main>
   <header>
     <img src="icon.png" alt="أيقونة ركّز">
-    <h1>دعم ركّز</h1>
-    <p class="tag">نساعدك تستفيد من ركّز وتحل أي مشكلة تواجهك</p>
-    <nav><a href="#contact">تواصل معنا</a><a href="#start">طريقة الاستخدام</a><a href="#faq">أسئلة شائعة</a><a href="index.html">سياسة الخصوصية</a></nav>
+    <h1>تواصل معنا</h1>
+    <p class="tag">Contact us · عندك سؤال أو مشكلة؟ يسعدنا نساعدك</p>
   </header>
 
-  <section id="contact">
-    <h2>تواصل معنا</h2>
-    <p>عندك سؤال أو مشكلة أو اقتراح؟ اكتب لنا وبنرد عليك في أقرب وقت. اذكر نوع جوالك وإصدار iOS ووصف المشكلة.</p>
-    <a class="btn" href="https://github.com/Ti0v/rakish/issues/new">أرسل رسالة للدعم</a>
-  </section>
+  <a class="contact" href="mailto:tec.point0011@gmail.com?subject=%D8%AF%D8%B9%D9%85%20%D8%B1%D9%83%D9%91%D8%B2">
+    <span class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+    <span><span class="label">البريد الإلكتروني · Email</span><span class="value">tec.point0011@gmail.com</span></span>
+  </a>
 
-  <section id="start">
-    <h2>طريقة الاستخدام</h2>
-    <ol>
-      <li>افتح ركّز، وفي شاشة الإذن اضغط <strong>اسمح بالوصول</strong> ووافق على "مدة استخدام الجهاز".</li>
-      <li>من تبويب <strong>الحجب</strong> اضغط <strong>التطبيقات المحجوبة</strong> واختر التطبيقات أو الفئات اللي تشتتك.</li>
-      <li>من تبويب <strong>ركّز</strong> اختر مدة الجلسة والوضع، واضغط <strong>ابدأ التركيز</strong>.</li>
-      <li>لو فتحت تطبيق محجوب تطلع لك شاشة "وقت التركيز". اضغط <strong>رجوع للتركيز</strong>.</li>
-      <li>فعّل <strong>الجداول</strong> أو <strong>الحد اليومي</strong> من تبويب الحجب عشان يشتغل الحجب تلقائياً.</li>
-    </ol>
-  </section>
+  <a class="contact" href="https://wa.me/966581105341">
+    <span class="icon"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg></span>
+    <span><span class="label">واتساب · WhatsApp</span><span class="value">+966 58 110 5341</span></span>
+  </a>
 
-  <section id="faq">
-    <h2>أسئلة شائعة</h2>
-    <details>
-      <summary>الحجب ما يشتغل، وش أسوي؟</summary>
-      <p>تأكد من ثلاث أشياء: إنك منحت إذن "مدة استخدام الجهاز"، وإنك اخترت تطبيقات من شاشة "الحجب"، وإن الجلسة أو الجدول شغّال الحين. لو طلع لك تنبيه "الحجب متوقف" في تبويب الحجب، اضغط عليه وأكمل الصلاحيات.</p>
-    </details>
-    <details>
-      <summary>وش الفرق بين الأوضاع الثلاثة؟</summary>
-      <p><strong>عادي:</strong> تقدر تنهي الجلسة متى ما بغيت. <strong>مهلة:</strong> تنتظر 10 ثوانٍ قبل الإنهاء عشان تفكر مرتين. <strong>تركيز عميق:</strong> ما تقدر تحذف التطبيقات حتى تنتهي الجلسة.</p>
-    </details>
-    <details>
-      <summary>كيف أوقف الحجب؟</summary>
-      <p>أنهِ الجلسة من شاشة الجلسة، أو أطفئ الجدول من تبويب "الحجب"، أو اختر "بدون حد" في الحد اليومي. وتقدر تسحب الإذن من الإعدادات ← مدة استخدام الجهاز.</p>
-    </details>
-    <details>
-      <summary>هل ركّز يشوف وش أسوي في جوالي؟</summary>
-      <p>لا. آبل تعطي ركّز رموز مشفّرة بس، فما نعرف أسماء تطبيقاتك ولا وش تسوي فيها. وكل بياناتك محفوظة على جوالك فقط. التفاصيل في <a href="index.html">سياسة الخصوصية</a>.</p>
-    </details>
-    <details>
-      <summary>هل الحجب يشتغل والتطبيق مقفل؟</summary>
-      <p>إيه. الحجب يتم من نظام آبل نفسه، فيستمر حتى لو قفلت ركّز أو أعدت تشغيل الجوال.</p>
-    </details>
-    <details>
-      <summary>غيّرت جوالي، هل تنتقل بياناتي؟</summary>
-      <p>البيانات محفوظة على الجهاز بس، فتنتقل مع النسخة الاحتياطية للجوال. على جوال جديد بدون نسخة احتياطية تبدأ من جديد وتختار التطبيقات مرة ثانية.</p>
-    </details>
-    <details>
-      <summary>كيف أحذف بياناتي؟</summary>
-      <p>احذف التطبيق من جوالك، وتنحذف كل بياناته معه.</p>
-    </details>
-  </section>
+  <a class="contact" href="tel:+966581105341">
+    <span class="icon"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z"/></svg></span>
+    <span><span class="label">الجوال · Phone</span><span class="value">+966 58 110 5341</span></span>
+  </a>
 
-  <section class="en">
-    <h2>Support (English)</h2>
-    <p>Need help with Rakkiz? <a href="https://github.com/Ti0v/rakish/issues/new">Contact support</a> and include your iPhone model, iOS version and a short description of the issue.</p>
-    <p><strong>Blocking not working?</strong> Make sure Screen Time access is granted, apps are selected in the Blocks tab, and a session or schedule is active.</p>
-    <p><strong>Privacy:</strong> Rakkiz collects no data. Everything stays on your device. See our <a href="index.html#en">privacy policy</a>.</p>
-  </section>
-
-  <footer>© 2026 Mazen Alahmadi · ركّز</footer>
+  <footer>© 2026 Mazen Alahmadi · ركّز · <a href="index.html">سياسة الخصوصية</a></footer>
 </main>
 </body>
 </html>
