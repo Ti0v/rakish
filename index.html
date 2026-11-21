@@ -3,97 +3,152 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ركّز · سياسة الخصوصية والدعم</title>
-<meta name="description" content="سياسة الخصوصية وصفحة الدعم لتطبيق ركّز على iOS.">
+<title>ركّز · سياسة الخصوصية</title>
+<meta name="description" content="سياسة الخصوصية وشروط الاشتراك والدعم لتطبيق ركّز: ألغاز للتركيز والذاكرة.">
+<link rel="icon" href="icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  :root { --space:#05060F; --card:rgba(255,255,255,.06); --border:rgba(255,255,255,.14); --nebula:#7C5CFF; --cyan:#3DD9EB; --text:#F4F3FF; --dim:#A9A6C9; }
+  :root { --bg:#F5F5F0; --card:rgba(255,255,255,.72); --border:rgba(30,107,86,.14); --primary:#1E6B56; --accent:#DE9F2F; --text:#1C2420; --dim:#5E6B65; color-scheme:light dark; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#111614; --card:rgba(255,255,255,.05); --border:rgba(255,255,255,.10); --primary:#4DB38F; --accent:#EDB54C; --text:#EEF2EF; --dim:#9AA8A1; } }
   * { box-sizing:border-box; }
   body {
-    margin:0; font-family:'IBM Plex Sans Arabic', system-ui, sans-serif; color:var(--text); line-height:1.8;
+    margin:0; font-family:'IBM Plex Sans Arabic', system-ui, sans-serif; color:var(--text); line-height:1.85;
     background:
-      radial-gradient(ellipse 700px 500px at 85% 0%, rgba(124,92,255,.35), transparent 70%),
-      linear-gradient(180deg, #0D1030 0%, var(--space) 60%);
-    background-color:var(--space); min-height:100vh;
+      radial-gradient(520px 420px at 95% -5%, color-mix(in srgb, var(--primary) 26%, transparent), transparent 70%),
+      radial-gradient(460px 380px at -10% 85%, color-mix(in srgb, var(--accent) 20%, transparent), transparent 70%);
+    background-color:var(--bg); min-height:100vh;
   }
-  main { max-width:760px; margin:0 auto; padding:48px 16px 64px; }
-  header { text-align:center; margin-bottom:32px; }
-  header img { width:96px; height:96px; border-radius:22px; box-shadow:0 12px 40px rgba(124,92,255,.45); }
-  h1 { font-size:40px; margin:16px 0 4px; }
+  header { text-align:center; margin-bottom:28px; }
+  header img { width:88px; height:88px; border-radius:22px; box-shadow:0 10px 30px rgba(30,107,86,.25); }
+  h1 { font-size:36px; margin:14px 0 2px; }
+  h1 .s { color:var(--accent); }
   .tag { color:var(--dim); margin:0; }
-  nav { display:flex; gap:12px; justify-content:center; margin-top:20px; flex-wrap:wrap; }
-  nav a { color:var(--text); text-decoration:none; border:1px solid var(--border); border-radius:999px; padding:6px 18px; }
-  section { background:var(--card); border:1px solid var(--border); border-radius:24px; padding:24px; margin-bottom:20px; }
-  h2 { margin:0 0 8px; font-size:24px; color:var(--cyan); }
-  h3 { margin:20px 0 4px; font-size:18px; }
-  p, li { color:#DCDAF2; }
-  ul { padding-inline-start:20px; margin:8px 0; }
-  a { color:var(--cyan); }
+  footer { text-align:center; color:var(--dim); font-size:14px; margin-top:32px; }
+  footer a { color:var(--dim); }
+  a { color:var(--primary); }
+  main { max-width:760px; margin:0 auto; padding:48px 16px 64px; }
+  nav { display:flex; gap:10px; justify-content:center; margin-top:18px; flex-wrap:wrap; }
+  nav a { color:var(--text); text-decoration:none; background:var(--card); border:1px solid var(--border); padding:6px 16px; border-radius:99px; font-size:15px; }
+  nav a:hover { border-color:var(--primary); }
+  section { background:var(--card); border:1px solid var(--border); border-radius:22px; padding:24px 24px 18px; margin-bottom:18px; backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); }
+  h2 { font-size:24px; margin:0 0 4px; }
+  h3 { font-size:17px; margin:20px 0 4px; color:var(--primary); }
+  .date { color:var(--dim); font-size:14px; margin:0 0 12px; }
+  .lead { font-weight:600; font-size:18px; }
+  ul { padding-inline-start:20px; margin:6px 0; }
+  li { margin:4px 0; }
   .en { direction:ltr; text-align:left; }
-  .en h2 { color:var(--nebula); }
-  footer { text-align:center; color:var(--dim); font-size:14px; }
+  .en ul { padding-inline-start:20px; }
+  .num { direction:ltr; unicode-bidi:embed; }
 </style>
 </head>
 <body>
 <main>
   <header>
-    <img src="icon.png" alt="أيقونة ركّز">
-    <h1>ركّز</h1>
-    <p class="tag">احجب المشتتات وركّز على هدفك</p>
-    <nav><a href="#privacy">سياسة الخصوصية</a><a href="support.html">الدعم</a><a href="#en">English</a></nav>
+    <img src="icon.png" alt="ركّز">
+    <h1>رك<span class="s">ّ</span>ز</h1>
+    <p class="tag">ألغاز للتركيز والذاكرة</p>
+    <nav><a href="#privacy">سياسة الخصوصية</a><a href="#subscription">الاشتراك</a><a href="support.html">الدعم</a><a href="#en">English</a></nav>
   </header>
 
   <section id="privacy">
     <h2>سياسة الخصوصية</h2>
-    <p>آخر تحديث: 8 نوفمبر 2026</p>
-    <p><strong>ركّز لا يجمع أي بيانات شخصية.</strong></p>
-    <h3>البيانات المحفوظة على جهازك</h3>
+    <p class="date">آخر تحديث: 21 نوفمبر 2026</p>
+    <p class="lead">ركّز لا يطلب منك أي بيانات شخصية، ولا يحتاج حساباً أو تسجيل دخول.</p>
+
+    <h3>البيانات المحفوظة على جهازك فقط</h3>
     <ul>
-      <li>كل الإعدادات والإحصائيات (دقائق التركيز، الجداول، الحد اليومي، هدفك) محفوظة على جهازك فقط، ولا تُرسل لأي سيرفر.</li>
-      <li>لا يوجد في التطبيق حسابات أو تسجيل دخول أو أدوات تحليل أو إعلانات أو تتبّع.</li>
+      <li>تقدّمك في الألغاز والمستويات، وإجاباتك وأوقات الحل.</li>
+      <li>نتائج قياس التركيز وإجاباتك على أسئلته، وخطتك اليومية.</li>
+      <li>إعداداتك: الوضع الليلي، ووقت التذكير، وقفل التطبيقات.</li>
     </ul>
+    <p>هذه البيانات لا تُرسل لأي سيرفر، وتُحذف كلها بحذف التطبيق.</p>
+
+    <h3>الاشتراكات</h3>
+    <p>الدفع يتم بالكامل عبر Apple، ولا نرى بيانات بطاقتك ولا اسمك ولا بريدك. لإدارة الاشتراك نستخدم خدمة <a href="https://www.revenuecat.com/privacy" rel="noopener">RevenueCat</a>، وتستقبل:</p>
+    <ul>
+      <li>معرّفاً عشوائياً مجهولاً يُنشأ على جهازك، لا يرتبط بهويتك.</li>
+      <li>تفاصيل الشراء من Apple: نوع الاشتراك، والتاريخ، والسعر، والدولة.</li>
+      <li>معلومات تقنية عامة مثل إصدار النظام والتطبيق.</li>
+    </ul>
+    <p>نستخدم هذه المعلومات فقط لتفعيل اشتراكك واستعادته. لا نبيعها ولا نشاركها لأغراض إعلانية.</p>
+
     <h3>إذن مدة استخدام الجهاز (Screen Time)</h3>
     <ul>
-      <li>يستخدم ركّز إطار Family Controls من آبل بإذن فردي تمنحه أنت لنفسك، لحجب التطبيقات والمواقع التي تختارها بنفسك.</li>
-      <li>آبل تعطي التطبيق رموزاً مشفّرة فقط، فلا يعرف ركّز أسماء تطبيقاتك ولا ما تفعله فيها.</li>
+      <li>اختياري: يستخدمه ركّز لقفل التطبيقات المشتتة التي تختارها أنت أثناء التمرين.</li>
+      <li>Apple تعطي التطبيق رموزاً مشفّرة فقط، فلا يعرف ركّز أسماء تطبيقاتك ولا ما تفعله فيها.</li>
     </ul>
+
+    <h3>الإشعارات</h3>
+    <p>التذكير اليومي يُجدول على جهازك بالوقت الذي تختاره، ويمكنك إيقافه من الإعدادات.</p>
+
+    <h3>لا إعلانات ولا تتبّع</h3>
+    <p>لا يوجد في ركّز إعلانات، ولا أدوات تحليل، ولا تتبّع عبر التطبيقات أو المواقع.</p>
+
+    <h3>تنبيه صحي</h3>
+    <p>ركّز أداة للتمرين والمتابعة الشخصية، وقياس التركيز فيه ليس تشخيصاً أو علاجاً طبياً.</p>
+
+    <h3>الأطفال</h3>
+    <p>التطبيق مناسب لكل الأعمار، ولا نجمع عمداً أي بيانات شخصية من أي مستخدم، بما في ذلك الأطفال.</p>
+
     <h3>التحكم ببياناتك</h3>
     <ul>
-      <li>تقدر توقف الحجب أو تسحب الإذن من إعدادات الجهاز في أي وقت.</li>
-      <li>بحذف التطبيق تُحذف كل بياناته من جهازك.</li>
+      <li>أعد ضبط تقدّمك من الإعدادات داخل التطبيق، أو احذف التطبيق لحذف كل بياناته.</li>
+      <li>اسحب إذن Screen Time أو الإشعارات من إعدادات الجهاز في أي وقت.</li>
     </ul>
-    <h3>الأطفال</h3>
-    <p>التطبيق مناسب لكل الأعمار ولا يجمع بيانات من أي مستخدم، بما في ذلك الأطفال.</p>
+
     <h3>التغييرات على هذه السياسة</h3>
     <p>إذا تغيّرت هذه السياسة سننشر النسخة الجديدة في هذه الصفحة مع تاريخ التحديث.</p>
   </section>
 
-  <section id="support">
-    <h2>الدعم والتواصل</h2>
-    <p>عندك سؤال أو مشكلة أو اقتراح؟ راسلنا على <a href="mailto:tec.point0011@gmail.com">tec.point0011@gmail.com</a> أو واتساب <a href="https://wa.me/966581105341" dir="ltr">+966 58 110 5341</a>.</p>
-    <p><a href="support.html">صفحة الدعم الكاملة ←</a></p>
-    <h3>أسئلة شائعة</h3>
+  <section id="subscription">
+    <h2>شروط الاشتراك</h2>
     <ul>
-      <li><strong>الحجب ما يشتغل؟</strong> تأكد إنك منحت إذن "مدة استخدام الجهاز" واخترت التطبيقات من شاشة "الحجب".</li>
-      <li><strong>كيف أوقف الحجب؟</strong> أنهِ الجلسة من داخل التطبيق، أو أطفئ الجدول من شاشة "الحجب".</li>
-      <li><strong>هل ركّز يشوف وش أسوي في جوالي؟</strong> لا. آبل ما تعطينا أسماء تطبيقاتك، وكل شي يبقى على جهازك.</li>
+      <li>المستوى المبتدئ مجاني بالكامل.</li>
+      <li>اشتراك «ركّز الكامل» يفتح المستويين المتوسط والمتقدم، وهو أسبوعي أو شهري أو كل 3 أشهر أو سنوي.</li>
+      <li>يُدفع عبر حساب Apple عند تأكيد الشراء، أو عند نهاية التجربة المجانية إن وُجدت.</li>
+      <li>يتجدد تلقائياً بالسعر والمدة نفسيهما ما لم يُلغَ قبل نهاية الفترة الحالية بـ 24 ساعة على الأقل.</li>
+      <li>تديره أو تلغيه من: الإعدادات ← اسمك ← الاشتراكات.</li>
+      <li>تستعيد اشتراكك على جهاز جديد من: الإعدادات داخل ركّز ← استعادة المشتريات.</li>
     </ul>
+    <p>شروط الاستخدام: <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener">اتفاقية الترخيص القياسية من Apple</a>.</p>
   </section>
 
-  <section id="en" class="en">
+  <section>
+    <h2>الدعم والتواصل</h2>
+    <p>عندك سؤال أو مشكلة أو اقتراح؟ راسلنا على <a href="mailto:tec.point0011@gmail.com">tec.point0011@gmail.com</a> أو واتساب <a class="num" href="https://wa.me/966581105341">+966 58 110 5341</a>.</p>
+    <p><a href="support.html">صفحة الدعم الكاملة ←</a></p>
+  </section>
+
+  <section id="en" class="en" dir="ltr">
     <h2>Privacy Policy (English)</h2>
-    <p>Last updated: November 8, 2026</p>
-    <p><strong>Rakkiz does not collect any personal data.</strong></p>
+    <p class="date">Last updated: November 21, 2026</p>
+    <p class="lead">Rakkiz doesn't ask for any personal data and needs no account or sign-in.</p>
+    <h3>Stored only on your device</h3>
     <ul>
-      <li>All settings and statistics (focus minutes, schedules, daily limit, your goal) are stored only on your device and are never sent to any server.</li>
-      <li>The app has no accounts, sign-in, analytics, advertising or tracking.</li>
-      <li>Rakkiz uses Apple's Family Controls framework with individual authorization that you grant to yourself, to limit the apps and websites you choose. Apple provides only opaque tokens, so Rakkiz never sees your app names or what you do in them.</li>
-      <li>You can stop blocking or revoke access in Settings at any time. Deleting the app removes all of its data from your device.</li>
-      <li>If this policy changes, the updated version will be posted on this page with a new date.</li>
+      <li>Your puzzle progress, answers and solving times.</li>
+      <li>Focus check results, your answers to its questions, and your daily plan.</li>
+      <li>Your settings: dark mode, reminder time and app lock.</li>
     </ul>
-    <h2>Support</h2>
-    <p>Questions or feedback? Email <a href="mailto:tec.point0011@gmail.com">tec.point0011@gmail.com</a> or WhatsApp <a href="https://wa.me/966581105341">+966 58 110 5341</a>.</p>
+    <p>This data is never sent to a server and is removed when you delete the app.</p>
+    <h3>Subscriptions</h3>
+    <p>Payments are handled entirely by Apple. We never see your card, name or email. Subscriptions are managed with <a href="https://www.revenuecat.com/privacy" rel="noopener">RevenueCat</a>, which receives a random anonymous identifier created on your device, purchase details from Apple (product, date, price, country), and general technical information such as OS and app version. We use this only to activate and restore your subscription, and never sell or share it for advertising.</p>
+    <h3>Screen Time</h3>
+    <p>Optional. Used to lock the distracting apps you choose while you train. Apple provides only opaque tokens, so Rakkiz never sees your app names or what you do in them.</p>
+    <h3>No ads, no tracking</h3>
+    <p>Rakkiz has no advertising, no analytics and no cross-app tracking. Daily reminders are scheduled locally on your device.</p>
+    <h3>Health notice</h3>
+    <p>Rakkiz is a training and personal tracking tool. Its focus check is not a medical diagnosis or treatment.</p>
+    <h3>Subscription terms</h3>
+    <ul>
+      <li>The beginner level is free. Rakkiz Full unlocks the intermediate and advanced levels (weekly, monthly, 3-month or yearly).</li>
+      <li>Payment is charged to your Apple account at confirmation of purchase, or at the end of a free trial if offered.</li>
+      <li>Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period. Manage or cancel in Settings → your name → Subscriptions.</li>
+      <li>Terms of Use: <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener">Apple Standard EULA</a>.</li>
+    </ul>
+    <h3>Contact</h3>
+    <p>Email <a href="mailto:tec.point0011@gmail.com">tec.point0011@gmail.com</a> or WhatsApp <a href="https://wa.me/966581105341">+966 58 110 5341</a>.</p>
   </section>
 
   <footer>© 2026 Mazen Alahmadi · ركّز</footer>
